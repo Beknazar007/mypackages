@@ -37,6 +37,4 @@ jobs:
         run: |
           docker compose -f "docker-compose.yml" up -d
           docker compose push app
-        with:
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          docker compose -f "docker-compose.yaml" down
