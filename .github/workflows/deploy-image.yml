@@ -34,7 +34,9 @@ jobs:
             type=sha
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v3
+        run: |
+          docker compose -f "docker-compose.yml" up -d
+          docker compose push app
         with:
           context: .
           push: true
