@@ -24,10 +24,18 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.TOKEN }}
 
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=sha
 
 
       - name: Build and push Docker image
         run: |
           docker build .
-          docker  push mypackages-app-1 
+          docker  push app
           docker compose -f "docker-compose.yml" down
