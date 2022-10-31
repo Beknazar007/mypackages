@@ -35,6 +35,6 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t mypackages-app-1 .
-          docker  push mypackages-app-1 
-          docker compose -f "docker-compose.yml" down
+          docker build -t ${{ steps.meta.outputs.tags }} .
+          docker  ${{ steps.meta.outputs.tags }} 
+          
