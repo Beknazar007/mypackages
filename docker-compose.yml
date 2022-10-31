@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: app
+    image: ghcr.io/cbeknazar007/mypackages
     build: 
       dockerfile: ./Dockerfile
       context: .
