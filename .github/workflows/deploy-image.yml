@@ -29,5 +29,5 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker compose -f "docker-compose.yml" up -d
-          docker compose push app
+          docker  push app
           docker compose -f "docker-compose.yml" down
