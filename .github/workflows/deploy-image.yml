@@ -29,5 +29,5 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t ${{ env.REGISTRY }}/${{env.IMAGE_NAME}} .
-          docker ${{ env.REGISTRY }}/${{env.IMAGE_NAME}}
+          docker push ${{ env.REGISTRY }}/${{env.IMAGE_NAME}}
           
