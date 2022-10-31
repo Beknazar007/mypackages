@@ -4,7 +4,7 @@ on: push
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: mypackages
+  IMAGE_NAME: beknazar007/mypackages
 
 jobs:
   build-and-push-image:
