@@ -31,6 +31,6 @@ jobs:
           docker compose build backend
          
           
-          # docker tag man-spec:latest ${{ env.IMAGE_NAME }}:v2
-          docker push man-spec:latest ghcr.io/beknazar007/mypackages/
+          docker tag man-spec:latest ${{ env.IMAGE_NAME }}:v2
+          docker push ${{ env.IMAGE_NAME }}:v2
           
