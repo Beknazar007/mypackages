@@ -32,5 +32,5 @@ jobs:
          
           
           # docker tag man-spec:latest ${{ env.IMAGE_NAME }}:v2
-          docker push ghcr.io/beknazar007/mypackages/man-spec:latest
+          docker push man-spec:latest ghcr.io/beknazar007/mypackages/
           
