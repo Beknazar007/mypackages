@@ -1,6 +1,6 @@
 
 
-# Push a image to Github Packages (GHCR)
+# Push an image to Github Packages (GHCR)
 1. Create image
 2. Create PAT on Github
 3. Authenticate GHCR
