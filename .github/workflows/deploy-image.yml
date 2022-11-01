@@ -31,7 +31,6 @@ jobs:
           docker compose build backend
          
           
-          # docker tag man-spec:latest ${{ env.IMAGE_NAME }}:v2
-          docker push -a
-          # ${{ env.IMAGE_NAME }}:v2
+          docker tag man-spec:latest ${{ env.IMAGE_NAME }}:v2
+          docker push ${{ env.IMAGE_NAME }}:v2
           
