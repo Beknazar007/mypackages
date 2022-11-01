@@ -30,7 +30,7 @@ jobs:
         run: |
           docker compose -f compose.yaml build  proxy
           docker compose -f compose.yaml build  db          
-          # docker compose -f compose.yaml build  backend
+          docker compose -f compose.yaml build  backend
          
           
           docker tag mypackages-backend:latest ${{ env.IMAGE_NAME }}:v2
