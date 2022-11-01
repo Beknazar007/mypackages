@@ -1,9 +1,0 @@
-version: '3'
-services:
-  app:
-    image: ghcr.io/beknazar007/mypackages
-    build: 
-      dockerfile: ./Dockerfile
-      context: .
-    ports:
-      - "8081:8080"
