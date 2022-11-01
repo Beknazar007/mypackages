@@ -28,6 +28,8 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker compose up -d
-          docker push .
+          docker compose build  backend
+          docker compose build  proxy
+          docker compose build  db
+          docker ps
           
