@@ -28,7 +28,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker compose up
+          docker compose build backend
          
           
           docker tag mypackages-backend:latest ${{ env.IMAGE_NAME }}:v2
