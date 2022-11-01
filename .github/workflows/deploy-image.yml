@@ -28,9 +28,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker compose -f compose.yaml build  proxy
-          docker compose -f compose.yaml build  db          
-          docker compose -f compose.yaml build  backend
+          docker compose up
          
           
           docker tag mypackages-backend:latest ${{ env.IMAGE_NAME }}:v2
