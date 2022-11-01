@@ -31,5 +31,6 @@ jobs:
           docker compose build  backend
           docker compose build  proxy
           docker compose build  db
-          docker ps
+          docker images
+          docker push mypackages-backend
           
