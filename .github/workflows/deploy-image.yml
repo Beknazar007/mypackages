@@ -17,20 +17,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Log in to the Container registry
-        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+#       - name: Log in to the Container registry
+#         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+#         with:
+#           registry: ${{ env.REGISTRY }}
+#           username: ${{ github.actor }}
+#           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: asdfasdf
+        run: echo ${{github.run_number}}
 
 
-
-      - name: Build and push Docker image
-        run: |
-          docker compose build backend
-         
-          
-          docker tag man-spec:latest ${{ env.IMAGE_NAME }}:v2
-          docker push ${{ env.IMAGE_NAME }}:v2
+#       - name: Build and push Docker image
+#         run: |
+#           docker compose build backend
+#           docker tag man-spec:latest ${{ env.IMAGE_NAME }}:v2
+#           docker push ${{ env.IMAGE_NAME }}:v2
           
