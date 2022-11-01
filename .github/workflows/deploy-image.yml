@@ -4,7 +4,7 @@ on: push
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: beknazar007/mypackages
+  IMAGE_NAME: ghcr.io/beknazar007/mypackages
 
 jobs:
   build-and-push-image:
@@ -31,6 +31,7 @@ jobs:
           docker compose build  backend
           docker compose build  proxy
           docker compose build  db
-          docker images
-          docker push mypackages-backend
+          
+          docker tag mypackages-backend:latest ${{ env.IMAGE_NAME }}:latest
+          docker push ${{ env.IMAGE_NAME }}:latest
           
